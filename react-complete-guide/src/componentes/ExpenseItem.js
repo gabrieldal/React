@@ -1,11 +1,22 @@
-import './ExpenseItem.css'
+import "./ExpenseItem.css";
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
+  
   return (
-    <div className='expense-item'>
-      <div>March 18th  2023</div>
-      <div className='expense-item__description'><h1>Car Insurance</h1></div>
-      <div className='expense-item__price'>$400.67</div>
+    <div className="expense-item">
+      <div>
+        <div>{month}</div>
+        <div>{year}</div>
+        <div>{day}</div>
+      </div>
+      <div className="expense-item__description">
+        <h1>{props.title}</h1>
+      </div>
+      <div className="expense-item__price">{props.amount}</div>
     </div>
   );
 }

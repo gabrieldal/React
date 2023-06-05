@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ExpenseItem from './componentes/ExpenseItem';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello World! I'm learning React! Uhull!!!
+          <ExpenseItem></ExpenseItem>
         </a>
       </header>
     </div>

@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Expenses from "./componentes/Expenses";
 
@@ -25,10 +24,10 @@ function App() {
     },
   ];
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+        <h2>Let's get started!</h2>
         <Expenses itens={expenses}/>
-      </header>
+      
     </div>
   );
 }
